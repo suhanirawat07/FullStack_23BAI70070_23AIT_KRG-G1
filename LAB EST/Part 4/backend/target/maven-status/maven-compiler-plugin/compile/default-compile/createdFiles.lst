@@ -1,0 +1,4 @@
+com\example\websocketdemo\WebSocketConfig.class
+com\example\websocketdemo\WebsocketDemoApplication.class
+com\example\websocketdemo\WebSocketEndpoint.class
+com\example\websocketdemo\WebSocketOriginConfigurator.class

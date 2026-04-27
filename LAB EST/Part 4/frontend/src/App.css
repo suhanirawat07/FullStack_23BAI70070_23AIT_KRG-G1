@@ -1,0 +1,157 @@
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: grid;
+  gap: 24px;
+  align-content: center;
+}
+
+.hero-card,
+.messages-panel {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background: rgba(10, 14, 32, 0.72);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
+}
+
+.hero-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+  gap: 20px;
+  padding: 28px;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  color: #9fc0ff;
+}
+
+.lede,
+.status-copy {
+  margin: 16px 0 0;
+  color: rgba(235, 240, 255, 0.78);
+  max-width: 62ch;
+}
+
+.status-card {
+  align-self: end;
+  justify-self: stretch;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(160deg, rgba(54, 83, 255, 0.26), rgba(22, 154, 190, 0.18));
+  border: 1px solid rgba(162, 206, 255, 0.18);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.status-connecting {
+  background: rgba(255, 196, 86, 0.18);
+  color: #ffd37c;
+}
+
+.status-connected {
+  background: rgba(69, 209, 125, 0.18);
+  color: #9df0b9;
+}
+
+.status-connection-error,
+.status-disconnected {
+  background: rgba(255, 109, 109, 0.18);
+  color: #ffabab;
+}
+
+.messages-panel {
+  padding: 24px;
+}
+
+.messages-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.messages-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.messages-header span {
+  color: rgba(235, 240, 255, 0.7);
+}
+
+.messages-list {
+  max-height: 420px;
+  overflow-y: auto;
+  display: grid;
+  gap: 12px;
+  padding-right: 4px;
+}
+
+.message-item,
+.empty-state {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.message-item {
+  padding: 16px 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.message-index {
+  font-size: 0.78rem;
+  color: #8fb0ff;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.message-item p,
+.empty-state {
+  margin: 0;
+  color: rgba(246, 248, 255, 0.92);
+}
+
+.empty-state {
+  padding: 20px;
+  color: rgba(235, 240, 255, 0.72);
+}
+
+@media (max-width: 760px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+  }
+
+  .messages-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

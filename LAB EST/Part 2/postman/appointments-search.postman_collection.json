@@ -1,0 +1,48 @@
+{
+  "info": {
+    "name": "Appointments Search",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Search Dr. Smith",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/appointments/search?doctor=dr. smith",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["appointments", "search"],
+          "query": [
+            {
+              "key": "doctor",
+              "value": "dr. smith"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Dr. Adams",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/appointments/search?doctor=DR. ADAMS",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["appointments", "search"],
+          "query": [
+            {
+              "key": "doctor",
+              "value": "DR. ADAMS"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
